@@ -1,4 +1,12 @@
-﻿using System;
+﻿/**
+ * Author: Alex Andriishyn, 200296533
+ * App: MVC Music Store
+ * File: ArtistsController.cs
+ * Descripton: Artists controller class
+ * version: 0.1
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;

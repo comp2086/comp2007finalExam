@@ -1,4 +1,13 @@
-﻿@model IEnumerable<COMP2006_S2016_FinalExamV2.Models.Artist>
+﻿<!--
+Author: Alex Andriishyn
+App: MVC Music Store
+File: Index.cshtml
+Description: Index view for Artists
+version: 0.1
+-->
+
+
+@model IEnumerable<COMP2006_S2016_FinalExamV2.Models.Artist>
 
 @{
     ViewBag.Title = "Index";
@@ -10,23 +19,26 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.ActionLink("Details", "Details", new { id=item.ArtistId })
-        </td>
-    </tr>
-}
-
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>
+				@Html.DisplayNameFor(model => model.Name)
+			</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>
+					@Html.DisplayFor(modelItem => item.Name)
+				</td>
+				<td>
+					@Html.ActionLink("Details", "Details", new { id = item.ArtistId })
+				</td>
+			</tr>
+		}
+	</tbody>
 </table>

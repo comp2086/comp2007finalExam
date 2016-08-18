@@ -1,4 +1,13 @@
-﻿@model COMP2006_S2016_FinalExamV2.Models.Genre
+﻿<!--
+Author: Alex Andriishyn, 200296533
+App: MVC Music Store
+File: Details.cshtml
+Description: Details view for Genre
+version: 0.1
+-->
+
+
+@model COMP2006_S2016_FinalExamV2.Models.Genre
 
 @{
     ViewBag.Title = "Details";
@@ -30,6 +39,5 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.GenreId }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
